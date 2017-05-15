@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="layouts-application">
   <head>
-    <title>Junci</title>
+    <title>君瓷世家</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,9 +9,13 @@
   </head>
 
   <body>
-    <%= render "common/navbar" %>
-    <%= render "common/flashes" %>
-    <%= yield %>
+    <div class="layouts-yield">
+      <%= render "common/navbar" %>
+      <%= render "common/flashes" %>
+      <div class="application-yield">
+        <%= yield %>
+      </div>
+    </div>
 
     <%= render "common/footer" %>
 
