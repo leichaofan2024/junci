@@ -3,5 +3,10 @@
   <%= f.input :description %>
   <%= f.input :quantity %>
   <%= f.input :price %>
+  <% if @product.image.present? %>
+    <span>目前商品图</span><br>
+    <%= image_tag(@product.image.thumb.url) %>
+  <% end %>
+  <%= f.input :image, as: :file %>
   <%= f.sumit "确定", data:{ disable_with: "提交中..." } %>
 <% end %>
