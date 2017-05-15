@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="navbar-brand" href="/">君瓷世家</a>
+    </div>
+    <div class="collapse navbar-collapse" id= "bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to("登入", new_user_session_path)%></li>
+        <li><%= link_to("登出", destroy_session_path)%></li>
+      </ul>
+    </div>
+  </div>
+</nav>
