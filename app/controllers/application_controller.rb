@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
       redirect_to "/"
     end
   end
+
+  protected
+  
+  def find_product
+    @product = Product.find(params[:id])
+  end
 end
