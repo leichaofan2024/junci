@@ -8,5 +8,5 @@
     <%= image_tag(@product.image.thumb.url) %>
   <% end %>
   <%= f.input :image, as: :file %>
-  <%= f.sumit "确定", data:{ disable_with: "提交中..." } %>
+  <%= f.submit "确定", data:{ disable_with: "提交中..." } %>
 <% end %>
