@@ -24,5 +24,26 @@ class Cart < ApplicationRecord
   def clean!
     cart_items.destroy_all
   end
-  
+
+  #  def total(n)
+  #
+  #   2..n.each do
+  #     f(1) = 1
+  #     f(0) = 0
+  #   f(n) = f(n-1) + f(n-2)
+  #   m << f(n)
+  #   end
+  #
+  #   m.aa.each do |f|
+  #
+  #    sum += f
+  #   end
+  #   sum
+  # end
+
+
+
+
+
+
 end
