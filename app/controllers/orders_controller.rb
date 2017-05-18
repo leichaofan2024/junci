@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
 
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find_by_token(params[:id])
     @product_lists = @order.product_lists
   end
 
@@ -20,7 +20,7 @@ class OrdersController < ApplicationController
         product_list.save
       end
       current_cart.cart_items.destroy_all
-      redirect_to order_path(@order)
+      redirect_to order_path(@order.token)
     else
       render 'carts/checkout'
     end
