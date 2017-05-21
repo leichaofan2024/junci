@@ -3,13 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // 顶部的导航
-  .header_placeholder {
-     display: none;
-     height:80px;
-}
+
 .header {
   width: 100%;
-  // position: fixed;
   top:0;
   left:0;
   height:60px;
@@ -32,6 +28,7 @@
   padding-bottom:20px;
   position:relative;
   width:90%;
+  overflow:auto;
 }
 .logo{
   font-size: 36px;
@@ -114,26 +111,29 @@
 }
 // 分类
 .category-bar{
-  height:200px;
-  line-height:200px;
-  width:100%;
+  height:150px;
+  margin-bottom: 60px;
 }
 
 .productCategory-item {
   float: left;
   width: 20%;
-  height: 300px;
+  height: 150px;
   text-align: center;
+  a{
+    height:150px;
+  }
 
 }
 
-.productCategory-item img {
+
+.productCategory-item a img {
   width: 150px;
   height: 150px;
   margin: 50px auto;
 }
 
-.productCategory-item h2 {
+.productCategory-item a h2 {
   position: relative;
   color:white;
   bottom: 170px;
@@ -143,14 +143,15 @@
 
 
 // 排序栏
-.order-bar{
+.product-order-bar{
   width:90%;
   height:30px;
   line-height:30px;
-  background:rgb(240,240,240);
+  background:white;
   margin:15px auto;
+}
 
-  span {
+.product-order-bar > span {
     margin-right:20px;
 
     a{
@@ -161,7 +162,7 @@
       color:green;
     }
   }
-}
+
 
 // 首页
 .product-area{
