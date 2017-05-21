@@ -28,13 +28,25 @@ class Admin::ProductsController < ApplicationController
   def edit
   end
   def update
-    if @product.update(product_params)
-      redirect_to admin_products_path,notice: "更新成功！"
+    if params[:photos] != nil
+      @product.photos.destroy_all
+
+      params[:photos]["avatar"].each do |a|
+        @picture = @product.photos.create(:avatar => a)
+      end
+
+      @product.update(product_params)
+      redirect_to admin_products_path, notice: "更新成功!"
+    elsif @product.update(product_params)
+      redirect_to admin_products_path
     else
       render :edit
     end
   end
-
+  def destroy
+  @product.destroy
+  redirect_to admin_products_path, alert: "删除成功！"
+end
 
   private
 

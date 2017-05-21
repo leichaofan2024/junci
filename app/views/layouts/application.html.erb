@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="layouts-application">
+<html style="height:100%;">
   <head>
-    <title>钧瓷世家</title>
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>窑钧瓷</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="layouts-yield">
+  <body style="height:100%;">
+    <div class=" layout-application clearfix">
+
       <%= render "common/navbar" %>
-      <%= render "common/flashes" %>
-      <div class="application-yield">
-        <%= yield %>
+      <div id="application-flashes">
+        <%= render "common/flashes"%>
       </div>
+      <%= yield %>
     </div>
 
     <%= render "common/footer" %>
-
   </body>
 </html>

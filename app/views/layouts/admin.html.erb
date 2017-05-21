@@ -1,27 +1,31 @@
 <!DOCTYPE html>
-<html class="layouts-application">
+<html style="height:100%">
   <head>
-    <title>钧瓷世家（后台）</title>
+    <title>窑钧瓷-后台</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="layouts-yield">
+  <body style="height:100%">
+    <div class="container-fluid layout-admin clearfix">
+
       <%= render "common/navbar" %>
-      <%= render "common/flashes" %>
-      <div class="col-md-2">
-        <%= link_to("Product",admin_products_path,class:"btn btn-primary")%>
-        <%= link_to("Order", admin_orders_path) %>
+
+
+      <%= render "common/flashes"%>
+      <div class="col-md-2 col-xs-4">
+        <ul class="nav nav-pills nav-stacked">
+          <li><%= link_to("后台列表", admin_products_path, class: "btn btn-primary sidebar") %> </li>
+          <li><%= link_to("订单列表", admin_orders_path, class: "btn btn-primary sidebar") %></li>
+          <li><%= link_to("商品分类", admin_categories_path, class: "btn btn-primary sidebar") %></li>
+        </ul>
       </div>
-      <div class="application-yield col-md-10">
+      <div class="col-md-10">
         <%= yield %>
       </div>
     </div>
-
     <%= render "common/footer" %>
-
   </body>
 </html>

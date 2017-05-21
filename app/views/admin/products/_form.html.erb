@@ -1,11 +1,15 @@
-<%= simple_form_for [:admin,@product] do |f| %>
-  <%= f.input :title  %>
-  <%= f.input :description %>
-  <%= f.input :quantity %>
-  <%= f.input :price %>
-  <%= f.select :category,["餐","茶", "酒", "花", "香" ]%>
-
-  <br><br>
+<div class="col-md-8 col-xs-12">
+  <div class="text-center">
+    <h3>商品编辑</h3>
+    <hr>
+  </div>
+  <%= simple_form_for [:admin, @product] do |f| %>
+    <%= f.input :title,:label => "瓷器名称" %>
+    <%= f.input :description, :label => "详细描述" %>
+    <%= f.input :price, :label => "单价" %>
+    <%= f.input :quantity, :label => "库存" %>
+    <%= f.label "瓷器品种"%><br>
+    <%= f.select(:category,["餐", "茶", "酒","花","香"]) %><br><br>
     <div class="clearfix">
       <% if @product.photos.present? %>
         <%= f.label "当前图片" %><br>
@@ -17,7 +21,8 @@
       <% end %>
     </div>
     <br>
-  <%= f.label "上传产品图（支持同时上传多图)" %><br>
-  <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
-  <%= f.submit "确定", data:{ disable_with: "提交中..." } %>
-<% end %>
+    <%= f.label "上传产品图（支持同时上传多图）" %>
+    <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]"%><br>
+    <%= f.submit "确定", data:{ disable_with: "Submitting..."} %>
+  <% end %>
+</div>
