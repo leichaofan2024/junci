@@ -22,16 +22,7 @@
   <tr id="review-delete-<%=review.id%>-1">
     <td>
       <%= simple_format(review.content) %>
-      <!-- <% if review.pictures.present? %>
-        <% review.pictures.each do |picture| %>
-          <div class="review-picture">
-            <a href="#m<%= picture.id %>" data-toggle="collapse"><%= image_tag(picture.avatar.xsmall.url) %></a>
-          </div>
-          <div class="collapse" id= "m<%= picture.id %>">
-            <%= image_tag(picture.avatar.medium.url)%>
-          </div>
-        <% end %>
-      <% end %> -->
+
         <% if current_user.present? && review.user.email == current_user.email%>
          <%= link_to("撤销评论",product_review_path(product,review),:remote=>true, method: :delete, data:{confirm: "确定删除此评论吗？"}, class: "btn btn-warning", style: "float:right;")%>
         <% end %>

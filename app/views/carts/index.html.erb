@@ -96,7 +96,7 @@
 
   <div class="cart-checkout">
     <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-danger btn-lg pull-right" ) %>
-     <span id="cart-sum-all"><%= render_cart_total_price(current_cart) %> RMB</span>
+     <span id="cart-sum-all"><%= render_total_price(current_cart) %> RMB</span>
      <b>总计:</b>
   </div>
 

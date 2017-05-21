@@ -4,7 +4,7 @@
 
     <p class="show-nav">
       <%= link_to("首页", products_path, style:"text-decoration:none") %> >
-      <%= link_to(@product.category.name, products_path(:category => @product.category.id),style:"text-decoration:none")%> >
+      <%= link_to(@product.category, products_path(:category => @product.category),style:"text-decoration:none")%> >
       <%= @product.title %>
     </p>
 
@@ -44,7 +44,6 @@
         <p class="quantity">库存 <span class="quantity"><%= @product.quantity %></span> </p>
         <p class="delivery">运费 <span class="delivery">满￥99 包邮</span></p>
       </div>
-      <!-- <p style="height:100px;"><%= simple_format(@product.description) %></p> -->
 
       <div class="show-action clearfix">
         <% if @product.quantity.present? && @product.quantity > 0 %>

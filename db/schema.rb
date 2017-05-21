@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170521111043) do
+ActiveRecord::Schema.define(version: 20170521122106) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170521111043) do
     t.integer  "quantity",   default: 1
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "title"
   end
 
   create_table "carts", force: :cascade do |t|
@@ -46,6 +47,7 @@ ActiveRecord::Schema.define(version: 20170521111043) do
     t.string   "payment_method"
     t.string   "aasm_state",       default: "order_placed"
     t.index ["aasm_state"], name: "index_orders_on_aasm_state"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|
@@ -97,6 +99,8 @@ ActiveRecord::Schema.define(version: 20170521111043) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "is_admin",               default: false
+    t.string   "nickname"
+    t.string   "image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
