@@ -23,8 +23,8 @@
     <td>
       <%= simple_format(review.content) %>
 
-        <% if current_user.present? && review.user.email == current_user.email%>
+        <!-- <% if current_user.present? && review.user.email == current_user.email%>
          <%= link_to("撤销评论",product_review_path(product,review),:remote=>true, method: :delete, data:{confirm: "确定删除此评论吗？"}, class: "btn btn-warning", style: "float:right;")%>
-        <% end %>
+        <% end %> -->
     </td>
   </tr>

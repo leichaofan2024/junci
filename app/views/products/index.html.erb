@@ -1,14 +1,38 @@
 <%= render :partial => "head_of_index" %>
 
 
-<div class="">
-  <ol>
-    <li><%= link_to("餐",  products_path(category: "餐"))%></li>
-    <li><%= link_to("茶",  products_path(category: "茶"))%></li>
-    <li><%= link_to("酒",  products_path(category: "酒"))%></li>
-    <li><%= link_to("花",  products_path(category: "花"))%></li>
-    <li><%= link_to("香",  products_path(category: "香"))%></li>
-  </ol>
+<div class="category-bar">
+
+    <div class="productCategory-item">
+      <%= link_to products_path(category: "茶") do %>
+      <img src="http://ww3.sinaimg.cn/large/006tNbRwly1ffqhbvqro5j309g09e40l.jpg" class="img-circle">
+      <h2>茶</h2>
+      <% end %>
+    </div>
+    <div class="productCategory-item">
+      <%= link_to products_path(category: "花") do %>
+      <img src="http://ww2.sinaimg.cn/large/006tNbRwly1ffqhahtjzzj309d09e0xg.jpg" class="img-circle">
+      <h2>花</h2>
+      <% end %>
+    </div>
+    <div class="productCategory-item">
+      <%= link_to products_path(category: "香") do %>
+        <img src="http://ww4.sinaimg.cn/large/006tNbRwly1ffqhequyopj309g0acgpq.jpg" class="img-circle">
+        <h2>香</h2>
+      <% end %>
+    </div>
+    <div class="productCategory-item">
+      <%= link_to products_path(category: "酒") do %>
+        <img src="http://ww2.sinaimg.cn/large/006tNbRwly1ffqgrgt4dhj309g09ktaz.jpg" class="img-circle">
+        <h2>酒</h2>
+      <% end %>
+    </div>
+    <div class="productCategory-item">
+      <%= link_to products_path(category: "餐") do %>
+        <img src="http://ww3.sinaimg.cn/large/006tNbRwly1ffqgtfa62pj309g09ltbd.jpg" class="img-circle">
+        <h2>餐</h2>
+      <% end %>
+    </div>
 </div>
 
 <div class="order-bar">

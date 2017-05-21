@@ -41,7 +41,7 @@
   float:left;
   display:inline;
   a {
-    color:rgb(93,64,55);
+    color:#3a2f2d;
   }
   a:hover {
     color: green;
@@ -66,7 +66,7 @@
   }
   .form-control{
     border-radius: 20px;
-    border:2px solid rgb(93,64,55);
+    border:2px solid #3a2f2d;
   }
   button {
     position:relative;
@@ -97,7 +97,7 @@
   text-align:center;
   a {
     text-decoration:none;
-    color: rgb(93,64,55);
+    color: #3a2f2d;
   }
   a:hover {
     text-decoration:none;
@@ -107,7 +107,7 @@
     margin-right:5px;
   }
   span {
-    background:rgb(93,64,55);
+    background:#3a2f2d;
     padding:1px 5px;
     border-radius:50%;
     color:white;
@@ -115,24 +115,33 @@
 }
 // 分类
 .category-bar{
-  height:50px;
-  line-height:50px;
+  height:200px;
+  line-height:200px;
   width:100%;
-  margin-bottom: 20px;
-  padding-left:50px;
-  background-color:rgb(51,51,51);
-  span a{
-    font-size: 20px;
-    color:rgb(158,158,158);
-    height:40px;
-    line-height:40px;
-    vertical-align: top;
-
-  }
-  span a:hover{
-    color:green;
-  }
 }
+
+.productCategory-item {
+  float: left;
+  width: 20%;
+  height: 300px;
+  text-align: center;
+
+}
+
+.productCategory-item img {
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+}
+
+.productCategory-item h2 {
+  position: relative;
+  color:white;
+  bottom: 170px;
+  left: 3px;
+  font-family: STKaiti, "华文楷体";
+}
+
 
 // 排序栏
 .order-bar{
@@ -335,9 +344,9 @@
   }
   .a2{
     width:200px;
-    color:rgb(93,64,55);
+    color:#3a2f2d;
     weight:10;
-    border:1px solid rgb(93,64,55);
+    border:1px solid #3a2f2d;
     border-radius: 20px;
     margin-bottom: 10px;
     float:left;
@@ -360,7 +369,7 @@
       color:red;
     }
     .show-heart2{
-      color:rgb(93,64,55);
+      color:#3a2f2d;
     }
   }
 }
