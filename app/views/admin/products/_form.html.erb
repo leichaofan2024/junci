@@ -3,6 +3,7 @@
   <%= f.input :description %>
   <%= f.input :quantity %>
   <%= f.input :price %>
+  <%= f.select :category,["餐","茶", "酒", "花", "香" ]%>
   <% if @product.image.present? %>
     <span>目前商品图</span><br>
     <%= image_tag(@product.image.thumb.url) %>

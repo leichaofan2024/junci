@@ -3,6 +3,18 @@ class ProductsController < ApplicationController
   before_action :find_product,only:[:show,:edit,:update,:destroy,:add_to_cart]
   def index
     @products = Product.all
+    case params[:category]
+    when "餐"
+      @products = Product.all.where(:category => "餐")
+    when "茶"
+      @products = Product.all.where(:category => "茶")
+    when "酒"
+      @products = Product.all.where(:category => "酒")
+    when "花"
+      @products = Product.all.where(:category => "花")
+    when "香"
+      @products = Product.all.where(:category => "香")
+    end
   end
 
   def show
