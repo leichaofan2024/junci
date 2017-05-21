@@ -4,10 +4,20 @@
   <%= f.input :quantity %>
   <%= f.input :price %>
   <%= f.select :category,["餐","茶", "酒", "花", "香" ]%>
-  <% if @product.image.present? %>
-    <span>目前商品图</span><br>
-    <%= image_tag(@product.image.thumb.url) %>
-  <% end %>
-  <%= f.input :image, as: :file %>
+
+  <br><br>
+    <div class="clearfix">
+      <% if @product.photos.present? %>
+        <%= f.label "当前图片" %><br>
+        <% @product.photos.each do |p| %>
+        <div class="col-md-4 clearfix">
+          <%= image_tag p.avatar.thumb.url %><br>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
+    <br>
+  <%= f.label "上传产品图（支持同时上传多图)" %><br>
+  <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>
   <%= f.submit "确定", data:{ disable_with: "提交中..." } %>
 <% end %>
