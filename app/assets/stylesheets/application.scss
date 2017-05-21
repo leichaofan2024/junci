@@ -18,6 +18,19 @@
 @import "font-awesome";
 
 
+.layout-admin{
+  position: relative;
+  padding-bottom:80px;
+  margin-bottom:-80px;
+  min-height: 100%;
+}
+.layout-application{
+  position:relative;
+  padding-bottom:80px;
+  margin-bottom:-80px;
+  min-height: 100%;
+}
+
 .avatar {
   position:relative;
   bottom:5px;
