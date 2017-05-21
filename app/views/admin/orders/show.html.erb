@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-md-12">
     <h2>订单明细(<%= render_payment_status(@order)%>) </h2>
+    <%= render :partial => "admin/orders/state_option", locals: { :order => @order} %>
+
     <%= render :partial => "order_mailer/mail_form"%>
   </div>
 </div>
