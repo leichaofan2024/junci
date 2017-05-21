@@ -11,7 +11,7 @@ class OrderMailer < ApplicationMailer
     @order = order
     @user  = @order.user
     @product_lists = @order.product_lists
-    mail(to: "admin@gmail.com", subject: "[窑钧瓷]用户#{order.user.email}申请取消订单 #{order.token}")
+    mail(to: "1181522516@qq.com", subject: "[窑钧瓷]用户#{order.user.email}申请取消订单 #{order.token}")
   end
 
   def notify_ship(order)
@@ -27,5 +27,5 @@ class OrderMailer < ApplicationMailer
     @product_lists = @order.product_lists
     mail(to: @user.email, subject: "[窑钧瓷]您的订单#{order.token}已取消")
   end
-      
+
 end
