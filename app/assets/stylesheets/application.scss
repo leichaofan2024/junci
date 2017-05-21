@@ -134,6 +134,12 @@
   font-family: STKaiti, "华文楷体";
 }
 
+.call-action {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+}
+
 //------- 头图 end -----------
 
 //------- 3个好处 begin --------
@@ -280,6 +286,109 @@
 .talk-about-us .carousel-indicators {
   bottom: -70px
 }
+
+.section-title {
+  font-family: STKaiti, "华文楷体";
+  font-size: 40px;
+}
 //------ 用户晒图 end -------
+
+.lp-section-3 {
+  display: block;
+  width: 100%;
+  height: 550px;
+  min-width: 960px;
+  background: #EDEDED;
+  background-position: center top;
+  background-size: cover
+}
+
+.lp-section-3 .feature-title {
+  margin-bottom: 50px;
+  letter-spacing: 3px
+}
+
+.lp-section-3 .feature-title h2 {
+  font-size: 1.428em
+}
+
+.lp-section-3 .feature-title p {
+  color: #444;
+  margin-bottom: 40px;
+  text-align: center
+}
+
+.lp-section-3 .content-3 {
+  display: block;
+  width: 960px;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  padding-top: 50px
+}
+
+.lp-section-3 .content-3 .feature-block {
+  display: block;
+  border-style: none;
+  border-radius: 0;
+  width: 290px;
+  position: relative;
+  margin: 20px 15px 0;
+  float: left
+}
+
+.lp-section-3 .content-3 .feature-block h3 {
+  font-size: 1.2em;
+  line-height: 28px;
+  margin-top: 20px;
+  color: #333
+}
+
+.lp-section-3 .content-3 .feature-block p {
+  line-height: 24px;
+  width: 260px;
+  margin-top: 30px;
+  margin-left: 20px;
+  font-size: 1em;
+  color: #666;
+  text-align: center
+}
+
+.lp-section-3 .content-3 .feature-block img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+
+}
+
+@media (max-width: 960px) {
+  .lp-section-3 {
+    min-width: 100%;
+    height: 850px
+  }
+
+  .lp-section-3 .content-3 {
+    width: 100%;
+    height: auto;
+    padding-top: 30px
+  }
+
+  .lp-section-3 .content-3 .feature-block {
+    width: 290px;
+    margin: 20px;
+    float: none
+  }
+
+  .lp-section-3 .content-3 .feature-block h3 {
+    margin-top: 10px
+  }
+
+  .lp-section-3 .content-3 .feature-block p {
+    margin: 0 auto 35px
+  }
+}
+
 
 //======= landing page end ======
