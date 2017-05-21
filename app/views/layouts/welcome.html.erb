@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jdstore2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="navbar">
+        <div class="navbar-content">
+          <div class="navbarContent-logo">
+           <img src="http://ww1.sinaimg.cn/large/006tNc79ly1ffppw2nz4zj305k02ewef.jpg"></src>
+          </div>
+        </div>
+      </div>
+    <%= yield %>
+  </div>
+
+  <%= render "common/footer" %>
+
+  </body>
+</html>

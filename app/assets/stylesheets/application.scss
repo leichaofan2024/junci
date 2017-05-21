@@ -25,17 +25,17 @@
     height:100%;
     .layouts-yield{
       min-height:100%;
-      background:green;
       overflow:auto;
       padding-bottom:80px;
       margin-bottom:-80px;
+      background: #EDEDED;
     }
     footer{
       width:100%;
       height:80px;
-      background:red;
       text-align:center;
       position:absolute;
+      background: #EDEDED;
     }
   }
 }
@@ -43,3 +43,231 @@
   width:80%;
   margin:20px auto;
 }
+
+
+//------- 整个网站都要用的样式 begin ------
+.bg-grey {
+  background: #EDEDED;
+}
+
+.bg-brown {
+  background: #89674C;
+}
+
+.bg-red {
+  background: #FF0000;
+}
+
+.bg-green {
+  background: #008080;
+}
+
+.bg-yellow {
+  background: #FFFF00;
+}
+//------- 整个网站都要用的样式 end ------
+
+//------- 导航栏 begin --------
+
+.navbar {
+  width: 100%;
+  height: 100px;
+}
+
+.navbarContent-logo {
+  width: 20%;
+  float: left;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.navbarContent-right {
+  width: 30%;
+  height: 100px;
+  float: right;
+}
+
+//------- 导航栏 end --------
+
+//======= landing page begin ======
+//------- 头图 begin -----------
+
+.carousel img {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  opacity: 0.9;
+}
+
+.slogan {
+  position: absolute;
+  font-size: 40px;
+  top: 30px;
+  left: 20px;
+  color: #fff;
+  font-family: STKaiti, "华文楷体";
+}
+
+.sub-slogan1 {
+  font-size: 60px;
+  font-family: STKaiti, "华文楷体";
+}
+
+.sub-slogan2 {
+  position: absolute;
+  font-size: 25px;
+  top: 130px;
+  left: 20px;
+  color: #fff;
+  font-family: STKaiti, "华文楷体";
+}
+
+//------- 头图 end -----------
+
+//------- 3个好处 begin --------
+
+.promise {
+  width: 100%;
+  height: 300px;
+}
+
+.promise h2 {
+  font-family: STKaiti, "华文楷体";
+  font-size: 40px;
+  text-align: center;
+}
+
+.promise p {
+  font-family: STKaiti, "华文楷体";
+  font-size: 20px;
+  text-align: center;
+}
+
+.panel-default {
+  font-family: STKaiti, "华文楷体";
+  font-size: 20px;
+}
+
+.panel-heading {
+  font-weight: bold;
+}
+
+//------- 3个好处 end --------
+
+//------- 公司介绍 begin ------
+
+.companyIntro-section {
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+}
+
+.companyIntro-section img {
+  width: 90%;
+}
+
+.left-block1 {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.right-block1 {
+  width: 50%;
+  float: right;
+  text-align: center;
+  margin-top: 150px;
+  font-family: STKaiti, "华文楷体";
+  font-size: 30px;
+  color: #3a2f2d;
+}
+
+.left-block2 {
+  width: 50%;
+  float: left;
+  clear: left;
+  text-align: center;
+  margin-top: 150px;
+  font-family: STKaiti, "华文楷体";
+  font-size: 30px;
+}
+
+.right-block2 {
+  width: 50%;
+  clear: right;
+  float: right;
+}
+
+.left-block3 {
+  width: 50%;
+  float: left;
+  clear: left;
+  text-align: center;
+}
+
+.right-block3 {
+  width: 50%;
+  float: right;
+  text-align: center;
+  margin-top: 150px;
+  font-family: STKaiti, "华文楷体";
+  font-size: 30px;
+}
+
+//------- 公司介绍 end --------
+
+//------ 用户晒图 begin -------
+
+.talk-about-us {
+  padding-bottom: 160px;
+  padding-top: 60px;
+  color: #666
+}
+
+.talk-about-us strong {
+  margin-top: 25px;
+  color: #4A6BB5;
+  font-weight: 600;
+  font-style: italic
+}
+
+.talk-about-us .item img {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  margin-bottom: 10px
+}
+
+.talk-about-us .item>p {
+  max-width: 600px;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  line-height: 2;
+  margin-bottom: 20px
+}
+
+.talk-about-us .carousel-indicators>li {
+  background-color: #dcdcdc;
+  border: 0 none;
+  height: 10px;
+  margin: 1px;
+  width: 10px;
+  border-radius: 0;
+  margin: 0 5px;
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg)
+}
+
+.talk-about-us .carousel-indicators li.active {
+  background-color: #4A6BB5
+}
+
+.talk-about-us .carousel-indicators {
+  bottom: -70px
+}
+//------ 用户晒图 end -------
+
+//======= landing page end ======
