@@ -70,8 +70,14 @@
   .navbar-nav li a:hover {
     color:green;
   }
+
+  .navbarContent-logo img {
+    background: #EDEDED;
+  }
+
   .dropdown-menu{
-    background:#EDEDED;
+    background: #EDEDED;
+    z-index: 1000;
   }
 }
 
