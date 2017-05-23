@@ -49,6 +49,7 @@
 .search-bar{
   width:35%;
   float:left;
+  margin-left: 100px;
 
 }
 .search-frame{
@@ -78,7 +79,6 @@
 // 购物车
 .cart-bar {
   width:10%;
-  margin-top:10px;
   float:left;
 }
 .cart{
@@ -111,8 +111,11 @@
 
 // 登录
 .login {
-  width: 35%;
+  width: 30%;
   float: right;
+  height: 80px;
+  line-height: 80px;
+  padding-top: 17px;
 }
 
 // 分类
