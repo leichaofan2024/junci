@@ -1,21 +1,22 @@
-<div class="registration-frame">
-  <div class="frame-2">
-    <h2>用户注册</h2>
+<!-- lonin和signup可以共用样式，所以都设置成了login -->
+<div class="login">
+<h2>注册用户</h2>
+  <hr class="login-line"/>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
 
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= f.error_notification %>
-
-      <div class="form-inputs">
-        <%= f.input :email, label:"邮箱", required: true, autofocus: true %>
-        <%= f.input :password, label:"密码",  required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-        <%= f.input :password_confirmation, label:"确认密码", required: true %>
-      </div>
-
-      <div class="form-actions ">
-        <%= f.button :submit, "注册", class: "registration-sign-up" %>
-      </div>
-    <% end %>
-
-    <%= render "devise/shared/links" %>
+  <div class="login-content">
+    <%= f.input :email, required: true, autofocus: true, label: false, placeholder: "请输入邮箱" %>
+    <%= f.input :password, required: true, label: false, placeholder: "请输入密码", hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, required: true, label: false, placeholder: "请重复输入密码" %>
   </div>
+
+  <div class="form-actions">
+    <%= f.submit "现在注册", class: "login-submit" %>
+  </div>
+<% end %>
+<hr class="login-line"/>
+<div class="extra-link">
+<%= render "devise/shared/links" %>
+</div>
 </div>

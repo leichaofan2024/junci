@@ -1,0 +1,106 @@
+.login {
+  background-color: red;
+}
+
+.lalala {
+  background: blue;
+}
+
+.login-content {
+  // border-top:1px solid #9d6d4a;
+  // border-bottom:1px solid #9d6d4a;
+  width: 400px;
+  margin: 0 auto;
+
+
+  input {
+    height: 45px;
+    border-color: #9d6d4a;
+    border-width: 2px;
+    text-size: 10px;
+
+
+      :-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: red;
+    }
+    :-moz-placeholder { /* Firefox 19+ */
+      color: red;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: red;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: red;
+    }
+
+    }
+
+    input:hover {
+      border-color: #9d6d4a;
+      }
+}
+
+
+.login h2 {
+  font-size:45px;
+  color:#9d6d4a;
+  text-align: center;
+  margin-bottom:60px;
+}
+
+
+.login-line {
+  background-color: #9d6d4a;
+  height: 1px;
+  border: none;
+
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.login-submit {
+  width: 200px;
+  background-color: #9d6d4a;
+  text-align: center;
+  height: 50px;
+  color: white;
+}
+
+.extra-link {
+  text-align: center;
+}
+
+.signup-text {
+  color: grey;
+}
+
+.signup-link {
+  color: red;
+}
+
+.forgetpassword {
+  color: red;
+}
+
+.login-link {
+  color: red;
+}
+
+.login-text {
+  color: grey;
+}
+
+.login div input:-moz-placeholder,
+.passwordBox div input:-moz-placeholder{
+    color: #9d6d4a;
+}
+.login div input:-ms-input-placeholder,
+.passwordBox div input:-ms-input-placeholder{
+    color: #9d6d4a;
+}
+.login div input::-webkit-input-placeholder,
+.passwordBox div input::-webkit-input-placeholder{
+    color: #9d6d4a;
+}
