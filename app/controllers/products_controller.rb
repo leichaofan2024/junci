@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, except:[:index, :show,:add_to_cart]
+  before_action :authenticate_user!, except:[:index, :show,:add_to_cart, :add_to_favorite, :quit_favorite]
   before_action :validates_search_key, only:[:search]
   before_action :find_product, only:[:show, :add_to_cart, :add_to_favorite, :quit_favorite, :pay_now]
   def index
@@ -45,12 +45,20 @@ class ProductsController < ApplicationController
   end
 
   def add_to_favorite
-    @product.add_to_favorite!(current_user)
+    if current_user
+      @product.add_to_favorite!(current_user)
+    else
+      flash[:alert] = "亲，你要先登录哦！"
+    end
   end
 
   def quit_favorite
-    @product.quit_favorite!(current_user)
-    render "add_to_favorite"
+    if current_user
+      @product.quit_favorite!(current_user)
+      render "add_to_favorite"
+    else
+      flash[:alert] = "亲，你要先登录哦！"
+    end
   end
 
   def search
