@@ -6,14 +6,12 @@
 
 .navbar-header-frame {
   width: 20%;
-  background-color: red;
-  height: 80px;
+  height: 90px;
 }
 
 .navbar-collapse-frame {
   width: 80%;
-  background-color: blue;
-  height: 80px;
+  height: 90px;
 }
 
 .header-content{
@@ -42,15 +40,15 @@
 
 // 搜索
 .search-bar{
-  width: 50%;
-  margin-left: 100px;
+  width: 40%;
   height: 80px;
-
+  margin-top: 10px;
 }
 .search-frame{
   position:relative;
-  width:80%;
-  margin-top:30px;
+  width: 70%;
+  margin-top:25px;
+  float:right;
   .search-input{
     float:left;
     width:80%;
@@ -75,46 +73,40 @@
 .cart-bar {
   width: 15%;
   height: 80px;
+  margin-top: 3px;
 }
-.cart{
-  width:50%;
-  cursor:pointer;
-  padding-top:8px;
-  background: #EDEDED;
-  font-size: 14px;
-  text-align:center;
-  a {
-    text-decoration:none;
-    color: #3a2f2d;
-  }
-  a:hover {
-    text-decoration:none;
-    color:green;
-  }
-  i {
-    margin-right:5px;
-  }
-  span {
-    background:#3a2f2d;
-    padding:1px 5px;
-    border-radius:50%;
-    color:white;
-  }
+
+.cart {
+  float: right;
 }
+
 
 // 登录
 .login {
-  width: 35%;
+  width: 25%;
   height: 80px;
   line-height: 80px;
-
 }
 
+.login-img {
+  margin-top: 20px;
+}
+
+.login-username {
+  margin:0 auto;
+  margin-top: 20px;
+  color: #907053;
+}
+
+.login-username:hover {
+  text-decoration: none;
+}
 
 // 分类
 .category-bar{
   height:150px;
   margin-bottom: 60px;
+
 }
 
 .productCategory-item {
@@ -122,6 +114,7 @@
   width: 20%;
   height: 150px;
   text-align: center;
+
   a{
     height:150px;
   }
