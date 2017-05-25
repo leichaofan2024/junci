@@ -1,7 +1,7 @@
 <nav class="navbar  navbar-frame" role="navigation" id="navigation-bar">
 
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header navbar-header-frame">
       <button type="button" class="navbar-toggle" data-toggle= "collapse"
                data-target=".navbar-ex1-collapse">
         <span class= "sr-only">Toggle navigation</span>
@@ -15,26 +15,22 @@
     </div>
 
 
-      <div class="navbar-collapse navbar-ex1-collapse collapse" aria-expanded="false" id="bs-example-navbar-collapse-1">
-        <div class="search-bar">
+      <div class="navbar-collapse navbar-ex1-collapse collapse navbar-collapse-frame" aria-expanded="false" id="bs-example-navbar-collapse-1">
+        <div class="search-bar navbar-left bg-brown">
           <%= render "products/search_bar"%>
         </div>
-        <div class="cart-bar">
+        <div class="cart-bar navbar-left bg-green">
           <div class="cart">
-            <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/23/5923d8f7ddf91.png", :class => "pic"), image_path(carts_path)%>
+            <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/24/5925ad8651cdd.png"), image_path(carts_path)%>
           </div>
         </div>
-        <ul class="nav navbar-nav navbar-right login">
+
+        <ul class="nav navbar-nav navbar-right login bg-red">
           <% if !current_user.present? %>
-            <li class="pull-right">
-              <%= link_to("注册", new_user_registration_path) %>
-            </li>
-            <li class="pull-right">
-              <%= link_to(content_tag(:i,"登录", class: "fa fa-sign-in"), new_user_session_path) %>
-            </li>
+              <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/25/5925af122c3d7.png"), image_path(new_user_session_path) %>
           <% else %>
 
-            <li class="drodown pull-right">
+            <li class="dropdown pull-right">
                <a href="#" class="dropdown-toggle clearfix" data-toggle= "dropdown" style="height:50px;">
                  <b class="caret navbar-right"></b>
                  <span class= "navbar-right clearfix">
@@ -46,7 +42,7 @@
                  </span>
                  <span class="navbar-right avatar clearfix">
                    <% if current_user.image.present? %>
-                     <%= image_tag(current_user.image.xxsmall.url,style:"border-radius:20px;")%>
+                     <%= image_tag(current_user.image.xsmall.url,style:"border-radius:20px;")%>
                    <% else %>
                      <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79ly1feg9gsctldj30rs0rswfs.jpg",width:40,height:40, style:"border-radius:20px;")%>
                    <% end %>
@@ -69,8 +65,6 @@
           <% end %>
         </ul>
       </div>
-
-
 
   </div>
 
