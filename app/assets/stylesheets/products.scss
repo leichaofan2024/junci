@@ -4,23 +4,16 @@
 
 // 顶部的导航
 
-.header {
-  width: 100%;
-  top:0;
-  left:0;
-  height:100px;
-  z-index:100;
-  background:#EDEDED;
+.navbar-header-frame {
+  width: 20%;
+  height: 90px;
 }
-.header-show {
-  width: 100%;
-  // position: fixed;
-  top:0;
-  left:0;
-  height:80px;
-  z-index:100;
 
+.navbar-collapse-frame {
+  width: 80%;
+  height: 90px;
 }
+
 .header-content{
   margin-left:auto !important;
   margin-right:auto !important;
@@ -32,7 +25,7 @@
 }
 .logo{
   font-size: 36px;
-  width: 20%;
+  width: 100%;
   height: 60px;
   float:left;
   display:inline;
@@ -47,15 +40,15 @@
 
 // 搜索
 .search-bar{
-  width:35%;
-  float:left;
-  margin-left: 100px;
-
+  width: 40%;
+  height: 80px;
+  margin-top: 10px;
 }
 .search-frame{
   position:relative;
-  width:80%;
-  margin-top:30px;
+  width: 70%;
+  margin-top:25px;
+  float:right;
   .search-input{
     float:left;
     width:80%;
@@ -63,7 +56,7 @@
   }
   .form-control{
     border-radius: 20px;
-    border:2px solid #4D3E39;
+    border:2px solid #907053;
   }
   button {
     position:relative;
@@ -78,50 +71,42 @@
 }
 // 购物车
 .cart-bar {
-  width:10%;
-  float:left;
+  width: 15%;
+  height: 80px;
+  margin-top: 3px;
 }
-.cart{
-  width:50%;
-  float:right;
-  height:40px;
-  cursor:pointer;
-  padding-top:8px;
-  background: #EDEDED;
-  font-size: 14px;
-  text-align:center;
-  a {
-    text-decoration:none;
-    color: #3a2f2d;
-  }
-  a:hover {
-    text-decoration:none;
-    color:green;
-  }
-  i {
-    margin-right:5px;
-  }
-  span {
-    background:#3a2f2d;
-    padding:1px 5px;
-    border-radius:50%;
-    color:white;
-  }
+
+.cart {
+  float: right;
 }
+
 
 // 登录
 .login {
-  width: 30%;
-  float: right;
+  width: 25%;
   height: 80px;
   line-height: 80px;
-  padding-top: 17px;
+}
+
+.login-img {
+  margin-top: 20px;
+}
+
+.login-username {
+  margin:0 auto;
+  margin-top: 20px;
+  color: #907053;
+}
+
+.login-username:hover {
+  text-decoration: none;
 }
 
 // 分类
 .category-bar{
   height:150px;
   margin-bottom: 60px;
+
 }
 
 .productCategory-item {
@@ -129,12 +114,11 @@
   width: 20%;
   height: 150px;
   text-align: center;
+
   a{
     height:150px;
   }
-
 }
-
 
 .productCategory-item a img {
   width: 150px;
