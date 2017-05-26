@@ -1,0 +1,2 @@
+$("#cart-tbody-<%= @cart_item.id %>").remove();
+$("#cart-sum-all").html("<%= render_total_price(current_cart) %> RMB")

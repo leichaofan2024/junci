@@ -1,0 +1,458 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 顶部的导航
+
+.navbar-header-frame {
+  width: 20%;
+  height: 90px;
+}
+
+.navbar-collapse-frame {
+  width: 80%;
+  height: 90px;
+}
+
+.header-content{
+  margin-left:auto !important;
+  margin-right:auto !important;
+  margin-top:30px;
+  padding-bottom:30px;
+  position:relative;
+  width:90%;
+  overflow:auto;
+}
+.logo{
+  font-size: 36px;
+  width: 100%;
+  height: 60px;
+  float:left;
+  display:inline;
+  a {
+    color:#3a2f2d;
+  }
+  a:hover {
+    color: green;
+    text-decoration:none;
+  }
+}
+
+// 搜索
+.search-bar{
+  width: 40%;
+  height: 80px;
+  margin-top: 10px;
+}
+.search-frame{
+  position:relative;
+  width: 70%;
+  margin-top:25px;
+  float:right;
+  .search-input{
+    float:left;
+    width:80%;
+    display:inline;
+  }
+  .form-control{
+    border-radius: 20px;
+    border:2px solid #907053;
+  }
+  button {
+    position:relative;
+    border-style: none;
+    background-color: white;
+    float:left;
+    color:gray;
+    right:30px;
+    top:8px;
+    display:inline;
+  }
+}
+// 购物车
+.cart-bar {
+  width: 15%;
+  height: 80px;
+  margin-top: 3px;
+}
+
+.cart {
+  float: right;
+}
+
+
+// 登录
+.login {
+  width: 25%;
+  height: 80px;
+  line-height: 80px;
+}
+
+.login-img {
+  margin-top: 20px;
+}
+
+.login-username {
+  margin:0 auto;
+  margin-top: 20px;
+  color: #907053;
+}
+
+.login-username:hover {
+  text-decoration: none;
+}
+
+// 分类
+.category-bar{
+  height:150px;
+  margin-bottom: 60px;
+
+}
+
+.productCategory-item {
+  float: left;
+  width: 20%;
+  height: 150px;
+  text-align: center;
+
+  a{
+    height:150px;
+  }
+}
+
+.productCategory-item a img {
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+}
+
+.productCategory-item a h2 {
+  position: relative;
+  color:white;
+  bottom: 170px;
+  left: 3px;
+  font-family: STKaiti, "华文楷体";
+}
+
+
+// 排序栏
+.product-order-bar{
+  width:90%;
+  height:30px;
+  line-height:30px;
+  background:white;
+  margin:15px auto;
+}
+
+.product-order-bar > span {
+    margin-right:20px;
+
+    a{
+      text-decoration: none;
+      color:rgb(33,33,33);
+    }
+    a:hover{
+      color:green;
+    }
+  }
+
+
+// 首页
+.product-area{
+  width: 90%;
+  margin:20px auto;
+  .product-list{
+    margin:0 auto 20px;
+
+    .product-block{
+      width:200px;
+      margin:0 auto 0;
+      transition:0.35s;
+      box-shadow:2px 2px 6px rgb(120,144,156);
+      &:hover{
+        box-shadow:4px 4px 6px rgb(120,144,156);
+      }
+      .product-picture{
+      }
+      .product-word{
+        height:50px;
+        width:200px;
+        background:rgb(240,240,240);
+        .product-word1 {
+          height:25px;
+          width:200px;
+          line-height:25px;
+          font-size:18px;
+          a{
+            position:relative;
+            float:right;
+            font-size:30px;
+            top:8px;
+            right:21px;
+            text-decoration:none;
+          }
+        }
+        .product-word2{
+          height:25px;
+          width:200px;
+          .product-title{
+            float:left;
+            width:150px;
+            height:20px;
+            overflow:scroll;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            word-wrap:normal;
+          }
+          .product-favorite {
+            width:50px;
+            position:relative;
+            left:22px;
+            bottom:4px;
+            float:right;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+.product-ending {
+  padding:30px 0;
+}
+
+// show页面样式
+.show-frame{
+  width:90%;
+  margin:20px auto 20px;
+}
+.show-nav{
+  margin-left: 15px;
+  a:hover{
+    color:green;
+  }
+}
+.show-card{
+  background:rgb(250,246,246);
+  width:100%;
+  margin-bottom:20px;
+  padding-bottom:20px;
+  border:1px solid #ddd;
+}
+.show-picture {
+  margin-top:30px;
+  div:first-of-type{
+  }
+}
+
+.show-photo-xsmall-box{
+  height:80px;
+  width:400px;
+  li>a:first-of-type{
+
+  }
+
+}
+
+.show-photo-xsmall-box.nav-tabs {
+  // border: none;
+  margin-top: 15px; }
+
+.show-photo-xsmall-box.nav-tabs li {
+  width: 18%;
+  margin-right: 2.5%;
+}
+.show-photo-xsmall-box.nav-tabs li img {
+  // max-width: 100%;
+  // display: block;
+  // border: 1px solid #ddd;
+}
+.show-photo-xsmall-box.nav-tabs li a {
+  padding: 0;
+  margin: 0;
+}
+.show-photo-xsmall-box.nav-tabs li:last-of-type {
+  margin-right: 0;
+}
+
+.show-service{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #666;
+  border-top: 1px dotted #dedede;
+  border-bottom: 1px dotted #dedede;
+  p.price{
+    span.rmb{
+      color: #d7282d;
+      margin-left: 20px;
+    }
+    span.price{
+      color: #d7282d;
+      font-size: 30px;
+    }
+  }
+  p.service{
+    span.service-detail{
+      margin-left: 20px;
+    }
+  }
+}
+
+.show-quantity{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #666;
+  p.quantity{
+    span.quantity{
+      margin-left: 20px;
+    }
+  }
+  p.sizes{
+    span.sizes{
+      margin-left: 20px;
+    }
+  }
+  p.delivery{
+    span.delivery{
+      margin-left: 20px;
+    }
+  }
+}
+.show-action{
+  padding-top:30px;
+
+  .a1{
+    width:200px;
+    color:white;
+    weight:10;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 10px;
+    background:rgba(215,40,45,1);
+  }
+  .a1:hover{
+    background: rgba(210,38,40 ,1);
+  }
+  .a2{
+    width:200px;
+    color:#3a2f2d;
+    weight:10;
+    border:1px solid #3a2f2d;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    float:left;
+  }
+  .show-scan{
+    float:left;
+    margin-left: 20px;
+    .collapse{
+    }
+  }
+}
+.show-favorit{
+  margin-top:15px;
+  margin-left:8px;
+
+  a {
+    margin-left:20px;
+    font-size: 20px;
+    .show-heart1{
+      color:red;
+    }
+    .show-heart2{
+      color:#3a2f2d;
+    }
+  }
+}
+
+// 评论区样式
+
+.review-card{
+  background:rgb(250,246,246);
+  width:100%;
+  margin-bottom:20px;
+  padding:20px;
+  border:1px solid #ddd;
+}
+.review-card2{
+  background:rgb(250,246,246);
+  width:100%;
+  margin:0px auto 20px;
+  padding-bottom:20px;
+  border:1px solid #ddd;
+  h3{
+    margin-left:20px;
+    border-bottom:1px solid #ddd;
+  }
+}
+.review-input{
+  margin:20px auto;
+  width:80%;
+  .review-file{
+    background-color:rgb(250,246,246);
+  }
+  .review-button{
+    background-color: rgb(240,240,240);
+    width:100px;
+    height:40px;
+    margin-left:40%;
+    box-shadow:4px 4px 4px rgba(189,189,189 ,1);
+  }
+}
+.review-picture{
+  display:inline-block;
+  margin-right:20px;
+
+}
+.review-faq-title{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #666;
+  font-size: 15px;
+}
+.review-question{
+  color:#666;
+}
+.review-answer{
+  color: #999;
+  margin-bottom: 30px;
+}
+.review-faq{
+  border-top: 1px dotted #dedede;
+  margin-top: 20px;
+  font-weight: 200;
+}
+.review-description{
+  margin:20px auto;
+  width:400px;
+  .review-p1{
+    margin-bottom:20px;
+  }
+  .review-p2{
+    margin-bottom:20px;
+  }
+}
+
+// 回到顶部
+  .back-to-top{
+    position:fixed;
+    bottom:100px;
+    right:20px;
+    width:40px;
+    height:40px;
+    background-color: rgba(117,117,117 ,0.5);
+    border-radius:20px;
+    a{
+      margin-top: 0;
+      margin-left: 0;
+      i{
+        position:relative;
+        font-size:20px;
+        color:white;
+        left:11px;
+        top:10px;
+      }
+    }
+  }

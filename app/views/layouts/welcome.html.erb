@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>卢钧窑</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container-fluid bg-grey">
+      <div class="navbar">
+        <div class="navbar-content">
+          <div class="navbarContent-logo">
+           <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/23/5923a969a3c7c.png", :class => "pic"), image_path(products_path)%>
+          </div>
+        </div>
+      </div>
+    <%= yield %>
+  </div>
+
+  <%= render "common/footer" %>
+
+  </body>
+</html>

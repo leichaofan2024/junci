@@ -1,0 +1,167 @@
+<div class="show-frame">
+
+    <p class="show-nav">
+      <%= link_to("首页", products_path, style:"text-decoration:none") %> >
+      <%= link_to(@product.category, products_path(:category => @product.category),style:"text-decoration:none")%> >
+      <%= @product.title %>
+    </p>
+
+  <div class="container show-card">
+
+    <div class="col-md-6 col-xs-12 ">
+
+      <% if @photos.present? %>
+       <div class="tab-content show-picture">
+         <% @photos.each_with_index do |p, index| %>
+           <% if index < 5 %>
+             <div class="tab-pane <%= render_active(index) %>" id="<%= index %>">
+
+               <%= image_tag p.avatar.medium.url %>
+             </div>
+           <% end %>
+         <% end %>
+       </div>
+       <ul class="show-photo-xsmall-box nav nav-tabs">
+         <% @photos.each_with_index do |p, index| %>
+           <% if index < 5 %>
+             <li class=""><a href="#<%= index %>" data-toggle= "tab"><%= image_tag p.avatar.xsmall.url %></a></li>
+           <% end %>
+         <% end %>
+       </ul>
+      <% else %>
+        <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
+      <% end %>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <h3><%= simple_format(@product.title) %></h3>
+      <div class="show-service">
+        <p class="price">售价 <span class="rmb">￥</span><span class="price"><%= @product.price %></span></p>
+        <p class="service">服务 <span class="service-detail">7天无忧退货 | 48小时快速退款 | 正品保证</span></p>
+      </div>
+      <div class="show-quantity">
+        <p class="quantity">库存 <span class="quantity"><%= @product.quantity %></span> </p>
+        <p class="delivery">运费 <span class="delivery">满￥99 包邮</span></p>
+      </div>
+
+      <div class="show-action clearfix">
+        <% if @product.quantity.present? && @product.quantity > 0 %>
+          <%= link_to("加入购物车",add_to_cart_product_path(@product),:remote=>true,method: :post, class: "btn btn-lg a1") %>
+          <%= link_to("立即购买", pay_now_product_path(@product), method: :post, class:"btn btn-lg a2", style: "background-color:none;") %>
+          <div class="show-scan col-md-5">
+            <a href="#scan" data-toggle="collapse">扫码支付</a>
+            <b class="caret"></b>
+            <div class="collapse" id="scan">
+              <img src="https://ww4.sinaimg.cn/large/006tNbRwly1feomfchjg2j308r08s0ts.jpg" alt="加载中。。。" width=120 height=120 >
+            </div>
+          </div>
+        <% else %>
+          <%= link_to("已售罄","#",class: "btn btn-lg", style:"background-color:gray;") %>
+        <% end %>
+      </div>
+
+
+      <div class="show-favorit" id="product-show-favorite<%=@product.id%>">
+
+          收藏人气(<%= @product.users.count %>)
+          <%= render_product_favorite_state(@product) %>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 col-xs-8">
+    <div class="review-card">
+
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a data-toggle="tab" href="#tab_default_1" >宝贝详情</a>
+          </li>
+          <li>
+            <a data-toggle="tab" href="#tab_default_2" id="review-count">宝贝评价(<%= @product.reviews.count%>)  </a>
+          </li>
+
+        </ul>
+
+       <div class="tab-content">
+          <div class="tab-pane " id="tab_default_2">
+            <div class="review-input">
+              <%= simple_form_for @review,url:product_reviews_path(@product),:remote => true do |f| %>
+                <%= f.input :content, label: "添加评论"%>
+                <div class="">
+                  <%= f.submit "提交", :disable_with => "提交中",class: "btn review-button" %>
+                </div>　　
+
+              <% end %>
+            </div>
+
+            <table class="table table-striped table-bordered">
+              <tbody id="product-review-<%=@product.id%>">
+                <% @product.reviews.order("created_at DESC").each do |review| %>
+                  <%= render :partial => "review_list", :locals=> {:product=> @product,:review => review}%>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+
+
+          <div class="tab-pane active" id="tab_default_1">
+            <div class="review-description clearfix">
+              <p><%= @product.description %></p>
+              <hr>
+              <% if @photos.present? %>
+                <% @photos.each_with_index do |p, index| %>
+                  <% if index== 0 %>
+                  <div class="col-md-12 col-xs-12 review-p1">
+                    <p class="text-center">产品展示</p>
+                    <%= image_tag p.avatar.medium.url %>
+                    <hr>
+                    <p class="text-center">产品细节</p>
+                  </div>
+                  <% else %>
+
+                    <div class="col-md-6 col-xs-6 review-p2" style="letter-spacing: -8px">
+                      <%= image_tag p.avatar.thumb.url %>
+                    </div>
+                  <% end %>
+                <% end %>
+              <% else %>
+                <%= image_tag("http://placehold.it/400x400&text=No Pic", class:"thumbnail") %>
+              <% end %>
+            </div>
+            <div class="review-faq">
+              <p class="review-faq-title text-center">常见问题</p>
+              <p class="review-question">使用什么快递发货？</p>
+              <p class="review-answer">卢钧窑默认使用顺丰快递发货，配送范围覆盖全国大部分地区（港澳台地区除外）。</p>
+              <p class="review-question">如何申请退货？</p>
+              <p class="review-answer">
+                1.自收到商品之日起7日内，顾客可申请无忧退货，退款将原路返还，不同的银行处理时间不同，预计1-5个工作日到账；<br />
+                2.退货流程：<br />
+                确认收货-申请退货-客服审核通过-用户寄回商品-仓库签收验货-退款审核-退款完成；<br />
+                3.因品味伴客产生的退货，如质量问题，退货邮费由品味伴客承担，退款完成后钱款将沿原渠道返还。因客户个人原因产生的退货，购买和寄回运费由客户个人承担。<br />
+              </p>
+              <p class="review-question">如何开具发票？</p>
+              <p class="review-answer">如需开具普通发票，请在下单时联系客服办理，我们将虽货物一起快递给您；</p>
+            </div>
+          </div>
+       </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-4 col-xs-4">
+    <div class="review-card2">
+      <h3>为您推荐:</h3>
+
+      <div class="product-area clearfix">
+        <% Product.all.sort_by{|product| product.users.count}.reverse.each_with_index do |product,index| %>
+          <% if index < 4 %>
+            <div class="col-md-12 col-xs-12 product-list">
+              <%= render :partial => "product_list", locals: {product: product, index: index} %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
