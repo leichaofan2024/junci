@@ -1,8 +1,7 @@
-
-<nav class="navbar  navbar-frame" role="navigation" id="navigation-bar">
+<nav class="navbar  navbar-frame clearfix" role="navigation" id="navigation-bar">
 
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header navbar-header-frame">
       <button type="button" class="navbar-toggle" data-toggle= "collapse"
                data-target=".navbar-ex1-collapse">
         <span class= "sr-only">Toggle navigation</span>
@@ -10,29 +9,37 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class= "navbar-brand" href="/"><span class="navbar1"></span>卢钧窑</a>
-
-
+      <div class="logo">
+        <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/23/5923a969a3c7c.png", :class => "pic"), image_path(root_path)%>
+      </div>
     </div>
 
 
+<<<<<<< HEAD
       <div class="navbar-collapse navbar-ex1-collapse collapse" aria-expanded="false" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li class=""><%= link_to("商品首页", products_path) %></li>
         </ul>
+=======
+      <div class="navbar-collapse navbar-ex1-collapse collapse navbar-collapse-frame" aria-expanded="false" id="bs-example-navbar-collapse-1">
+        <div class="search-bar navbar-left">
+          <%= render "products/search_bar"%>
+        </div>
+        <div class="cart-bar navbar-left">
+          <div class="cart">
+            <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/24/5925ad8651cdd.png"), image_path(carts_path)%>
+          </div>
+        </div>
+>>>>>>> 5abc684a1f8c38cf8e36cd0afba3bfc08f98b97b
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right login">
           <% if !current_user.present? %>
-            <li>
-              <%= link_to("注册", new_user_registration_path) %>
-            </li>
-            <li>
-              <%= link_to(content_tag(:i,"登录", class: "fa fa-sign-in"), new_user_session_path) %>
+            <li class="pull-left login-img">
+              <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/25/5925af122c3d7.png"), image_path(new_user_session_path) %>
             </li>
           <% else %>
-            <li><%= link_to("我的订单", account_orders_path) %></li>
-            <li><%= link_to(content_tag(:i, "我的收藏", class: "fa fa-heart fa-md"), products_path(:favorite => "yes"))%> </li>
-            <li class="drodown">
+
+            <li class="dropdown pull-right login-username">
                <a href="#" class="dropdown-toggle clearfix" data-toggle= "dropdown" style="height:50px;">
                  <b class="caret navbar-right"></b>
                  <span class= "navbar-right clearfix">
@@ -44,7 +51,7 @@
                  </span>
                  <span class="navbar-right avatar clearfix">
                    <% if current_user.image.present? %>
-                     <%= image_tag(current_user.image.xxsmall.url,style:"border-radius:20px;")%>
+                     <%= image_tag(current_user.image.xsmall.url,style:"border-radius:20px;")%>
                    <% else %>
                      <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79ly1feg9gsctldj30rs0rswfs.jpg",width:40,height:40, style:"border-radius:20px;")%>
                    <% end %>
@@ -52,6 +59,8 @@
 
                </a>
                <ul class="dropdown-menu">
+                 <li><%= link_to("我的订单", account_orders_path) %></li>
+                 <li><%= link_to(content_tag(:i, "我的收藏", class: "fa fa-heart fa-md"), products_path(:favorite => "yes"))%> </li>
                  <% if current_user.admin? %>
                  <li><%= link_to("后台管理", admin_products_path) %></li>
                  <% end %>
@@ -66,8 +75,7 @@
         </ul>
       </div>
 
-
-
   </div>
+</div>
 
 </nav>

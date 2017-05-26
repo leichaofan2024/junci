@@ -1,18 +1,21 @@
 class ReviewsController < ApplicationController
-  before_action :authenticate_user!
 
   def create
-    @product = Product.find(params[:product_id])
-    @review = Review.new(review_params)
-    @review.user = current_user
-    @review.product = @product
-    if @review.save
-      if params[:pictures] != nil
-        params[:pictures]["avatar"].each do |a|
-          @picture = @review.pictures.create(:avatar => a)
+    if current_user
+      @product = Product.find(params[:product_id])
+      @review = Review.new(review_params)
+      @review.user = current_user
+      @review.product = @product
+      if @review.save
+        if params[:pictures] != nil
+          params[:pictures]["avatar"].each do |a|
+            @picture = @review.pictures.create(:avatar => a)
+          end
         end
       end
-    end
+    else
+      flash[:alert] = "亲，请先登录哦！"
+    end 
   end
 
   def destroy

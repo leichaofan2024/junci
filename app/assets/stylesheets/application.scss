@@ -56,9 +56,11 @@
   margin-bottom: 0;
   border-radius:0;
   background-color: #EDEDED;
+  height: 100px;
+  line-height: 100px;
+  width: 100%;
 
   .navbar-header{
-    margin-left: 6%;
     a {
       color:#3a2f2d;
       transition:0.35s;
@@ -70,8 +72,14 @@
   .navbar-nav li a:hover {
     color:green;
   }
+
+  .navbarContent-logo img {
+    background: #EDEDED;
+  }
+
   .dropdown-menu{
-    background:#EDEDED;
+    background: #EDEDED;
+    z-index: 1000;
   }
 }
 
