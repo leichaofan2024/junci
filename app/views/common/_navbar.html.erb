@@ -14,13 +14,6 @@
       </div>
     </div>
 
-
-<<<<<<< HEAD
-      <div class="navbar-collapse navbar-ex1-collapse collapse" aria-expanded="false" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class=""><%= link_to("商品首页", products_path) %></li>
-        </ul>
-=======
       <div class="navbar-collapse navbar-ex1-collapse collapse navbar-collapse-frame" aria-expanded="false" id="bs-example-navbar-collapse-1">
         <div class="search-bar navbar-left">
           <%= render "products/search_bar"%>
@@ -30,7 +23,7 @@
             <%= link_to image_tag("https://ooo.0o0.ooo/2017/05/24/5925ad8651cdd.png"), image_path(carts_path)%>
           </div>
         </div>
->>>>>>> 5abc684a1f8c38cf8e36cd0afba3bfc08f98b97b
+
 
         <ul class="nav navbar-nav navbar-right login">
           <% if !current_user.present? %>
@@ -75,7 +68,7 @@
         </ul>
       </div>
 
-  </div>
+  
 </div>
 
 </nav>
