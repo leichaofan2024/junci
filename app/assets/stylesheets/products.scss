@@ -117,6 +117,7 @@
 
   a{
     height:150px;
+    text-decoration: none !important;
   }
 }
 
@@ -135,27 +136,32 @@
 }
 
 
+
 // 排序栏
 .product-order-bar{
-  width:90%;
+  width:4%;
   height:30px;
   line-height:30px;
-  background:white;
-  margin:15px auto;
+  background: black;
+  margin-left: 10px;
 }
 
-.product-order-bar > span {
-    margin-right:20px;
+.product-order-bar button{
+  border-color: #907053;
+  border-width: 2px;
+  background: #EDEDED;
+}
 
-    a{
-      text-decoration: none;
-      color:rgb(33,33,33);
-    }
-    a:hover{
-      color:green;
-    }
-  }
+.product-order-bar dropdown-menu-list{
+  text-color: #907053;
+  text-align: center;
+}
 
+.product-order-bar dropdown-menu{
+  width: 3%;
+  background: #EDEDED;
+  text-align: center;
+}
 
 // 首页
 .product-area{

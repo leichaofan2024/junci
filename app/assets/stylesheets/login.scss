@@ -1,7 +1,7 @@
 
 .login-key {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-bottom: 200px;
   background-color: #EDEDED;
 
 }
@@ -77,14 +77,16 @@
 }
 
 .login-key div input:-moz-placeholder,
-.passwordBox div input:-moz-placeholder{
+ div input:-moz-placeholder{
     color: #907053;
 }
+
 .login-key div input:-ms-input-placeholder,
-.passwordBox div input:-ms-input-placeholder{
+ div input:-ms-input-placeholder{
     color: #907053;
 }
+
 .login-key div input::-webkit-input-placeholder,
-.passwordBox div input::-webkit-input-placeholder{
+ div input::-webkit-input-placeholder{
     color: #907053;
 }
