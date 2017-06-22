@@ -9,7 +9,11 @@
     <%= f.input :price, :label => "单价" %>
     <%= f.input :quantity, :label => "库存" %>
     <%= f.label "瓷器品种"%><br>
-    <%= f.select(:category,["餐", "茶", "酒","花","香"]) %><br><br>
+    <%= f.select(:category,["餐", "茶", "酒","花","香"]) %><br><br><div class="form-group">
+      <%= f.label :friendly_id %>
+      <%= f.text_field :friendly_id, :required => true, :class => "form-control" %>
+      <p class="help-block">限小写英数字及横线，将作为网址的一部分</p>
+    </div>
     <div class="clearfix">
       <% if @product.photos.present? %>
         <%= f.label "当前图片" %><br>
@@ -23,6 +27,7 @@
     <br>
     <%= f.label "上传产品图（支持同时上传多图）" %>
     <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]"%><br>
+
     <%= f.submit "确定", data:{ disable_with: "Submitting..."} %>
   <% end %>
 </div>

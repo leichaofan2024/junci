@@ -11,6 +11,11 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new
     @photo = @product.photos.build
   end
+
+  def show
+    @product = Product.find_by_friendly_id!(params[:id])
+  end
+
   def create
     @product = Product.new(product_params)
     if @product.save
@@ -26,8 +31,11 @@ class Admin::ProductsController < ApplicationController
   end
 
   def edit
+    @product = Product.find_by_friendly_id!(params[:id])
   end
+
   def update
+    @product = Product.find_by_friendly_id!(params[:id])
     if params[:photos] != nil
       @product.photos.destroy_all
 
@@ -44,7 +52,8 @@ class Admin::ProductsController < ApplicationController
     end
   end
   def destroy
-  @product.destroy
+    @product = Product.find_by_friendly_id!(params[:id])
+    @product.destroy
   redirect_to admin_products_path, alert: "删除成功！"
 end
 
@@ -53,7 +62,7 @@ end
 
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image, :category)
+    params.require(:product).permit(:title, :description, :quantity, :price, :image, :category, :friendly_id)
   end
 
 end
